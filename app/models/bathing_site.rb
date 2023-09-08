@@ -1,0 +1,2 @@
+class BathingSite < ApplicationRecord
+end
