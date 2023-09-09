@@ -1,8 +1,11 @@
 <h1>Bathing Sites</h1>
 
-<% @bathing_sites.each do |b| %>
-    <%= b.site_name %>
-    <%= b.pollution_level %>
-    <%= b.tide %>
-    <%= b.region %>
+<% @bathing_sites.each do |bathing_site| %>
+  <%= link_to bathing_site_path(bathing_site) do %>
+    <%= bathing_site.site_name %>
   <% end %>
+    <%= bathing_site.pollution_level %>
+    <%= bathing_site.tide %>
+    <%= bathing_site.region %>
+    <br>
+<% end %>
